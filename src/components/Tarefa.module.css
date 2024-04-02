@@ -1,0 +1,30 @@
+.tarefa {
+    display: flex;
+    background: var(--gray-400);
+    padding: 16px;
+    border-radius: 5px;
+    margin-top: 12px;
+    gap: 12px;
+}
+
+.tarefa p {
+   width: 55rem;
+}
+
+.deletarTarefa {
+    background: transparent;
+    border: none;
+    color: var( --gray-300);
+    cursor: pointer;
+}
+
+.deletarTarefa:hover {
+    color: var( --red);	
+}
+
+.checkTarefa{
+    background: transparent;
+    border: none;
+    color: var(--purple-100);
+    cursor: pointer;
+}

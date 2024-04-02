@@ -1,0 +1,31 @@
+.listaTarefas {
+    display: flex;
+    flex-direction: column;
+    max-width: 55rem;
+    margin: 64px auto;
+}
+
+.contadores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contadores div {
+    display: flex;
+    gap: 5px;
+}
+
+.contadores span {
+    background: var(--gray-400);
+    padding: 1px 10px;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.tarefasCriadas {
+    color: var(--blue-100);
+}
+
+.tarefasConcluidas {
+    color: var(--purple-100);
+}
