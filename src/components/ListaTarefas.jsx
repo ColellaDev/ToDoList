@@ -25,9 +25,9 @@ function criarNovaTarefa() {
             </div>
 
             <div className={styles.tarefas}>
-                 {tarefas.map(tarefa => {
-                   return <Tarefa content="teste"/>
-                 })}
+                {tarefas.map((tarefa, index) => {
+                 return <Tarefa key={index} content="teste" />
+             })}
             </div>
             
 
