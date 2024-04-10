@@ -7,13 +7,12 @@ import { ListaTarefas } from "./components/ListaTarefas"
 
 export function App() {
 
-  const [tarefas, setTarefas] = useState([1, 2]);
-
-  function criarNovaTarefa() {
-    setTarefas([...tarefas, tarefas.length + 1])
+  const [tarefas, setTarefas] = useState([]);
+  
+  function criarNovaTarefa(novaTarefa) {
+    setTarefas([...tarefas, novaTarefa]);
   }
 
-  
   return (
     <>
     <Header/>

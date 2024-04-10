@@ -20,7 +20,7 @@ export function ListaTarefas({ tarefas }) {
 
             <div className={styles.tarefas}>
                 {tarefas.map((tarefa, index) => {
-                 return <Tarefa key={index} content="teste" />
+                 return <Tarefa key={index} content={tarefa} />
              })}
             </div>
             
