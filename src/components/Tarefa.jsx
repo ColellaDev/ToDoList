@@ -5,7 +5,7 @@ import { FaRegCircle } from "react-icons/fa";
 
 
 
-export function Tarefa({content}) {
+export function Tarefa({content, onDelete}) {
     return (
         <div className={styles.tarefa}>
 
@@ -15,7 +15,7 @@ export function Tarefa({content}) {
 
            <p>{content}</p> 
 
-           <button className={styles.deletarTarefa} title="Deletar tarefa">
+           <button className={styles.deletarTarefa} onClick={onDelete} title="Deletar tarefa">
                 <FaRegTrashAlt />
            </button>
 

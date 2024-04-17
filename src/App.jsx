@@ -13,11 +13,16 @@ export function App() {
     setTarefas([...tarefas, novaTarefa]);
   }
 
+  function deletarTarefa(index) {
+    const newTarefas = tarefas.filter((_, i) => i !== index);
+    setTarefas(newTarefas);
+}
+
   return (
     <>
     <Header/>
     <CriarTarefa criarNovaTarefa={criarNovaTarefa}/>
-    <ListaTarefas tarefas={tarefas}/>
+    <ListaTarefas tarefas={tarefas} deletarTarefa={deletarTarefa}/>
     </>
   )
 }

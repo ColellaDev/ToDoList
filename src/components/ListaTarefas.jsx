@@ -2,7 +2,8 @@
 import styles from './ListaTarefas.module.css';
 import { Tarefa } from "./Tarefa";
 
-export function ListaTarefas({ tarefas }) {
+export function ListaTarefas({ tarefas, deletarTarefa }) {
+
 
     return (
         <div className={styles.listaTarefas}>
@@ -20,7 +21,7 @@ export function ListaTarefas({ tarefas }) {
 
             <div className={styles.tarefas}>
                 {tarefas.map((tarefa, index) => {
-                 return <Tarefa key={index} content={tarefa} />
+                 return <Tarefa key={index} content={tarefa} onDelete={() => deletarTarefa(index)} />
              })}
             </div>
             
