@@ -11,6 +11,11 @@
    width: 55rem;
 }
 
+.completed p {
+    color: gray; 
+    text-decoration: line-through;
+}
+
 .deletarTarefa {
     background: transparent;
     border: none;

@@ -5,12 +5,12 @@ import { FaCheckCircle } from "react-icons/fa";
 
 
 
-export function Tarefa({content, onDelete, onComplete, completed}) {
+export function Tarefa({content, onDelete, onComplete, completed=false}) {
     return (
-        <div className={styles.tarefa}>
+        <div className={`${styles.tarefa} ${completed ? styles.completed : ''}`}>
 
             <button className={styles.checkTarefa} onClick={onComplete}>
-             <FaRegCircle />
+            {completed ? <FaCheckCircle /> : <FaRegCircle />}
             </button>
 
            <p>{content}</p> 
