@@ -16,13 +16,17 @@ export function App() {
   function deletarTarefa(index) {
     const newTarefas = tarefas.filter((_, i) => i !== index);
     setTarefas(newTarefas);
-}
+  }
+
+  function completarTarefa(index) {
+    
+  }
 
   return (
     <>
     <Header/>
     <CriarTarefa criarNovaTarefa={criarNovaTarefa}/>
-    <ListaTarefas tarefas={tarefas} deletarTarefa={deletarTarefa}/>
+    <ListaTarefas tarefas={tarefas} deletarTarefa={deletarTarefa} completarTarefa={completarTarefa}/>
     </>
   )
 }
