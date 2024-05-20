@@ -18,8 +18,9 @@ export function App() {
     setTarefas(newTarefas);
   }
 
-  function completarTarefa() {
-   
+  
+
+  function completarTarefa(index) {
   }
 
   return (

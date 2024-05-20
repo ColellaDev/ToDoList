@@ -2,7 +2,7 @@
 import styles from './ListaTarefas.module.css';
 import { Tarefa } from "./Tarefa";
 
-export function ListaTarefas({ tarefas, deletarTarefa, completarTarefa }) {
+export function ListaTarefas({ tarefas, deletarTarefa, completarTarefa}) {
 
 
     return (
@@ -20,8 +20,18 @@ export function ListaTarefas({ tarefas, deletarTarefa, completarTarefa }) {
             </div>
 
             <div className={styles.tarefas}>
+                
+                <Tarefa content="Tarefa completa" completed/>
+                <Tarefa content="Tarefa incompleta" />
+
                 {tarefas.map((tarefa, index) => {
-                 return <Tarefa key={index} content={tarefa} onComplete={()=> completarTarefa(index)} onDelete={() => deletarTarefa(index)} />
+                 return <Tarefa 
+                        key={index} 
+                        content={tarefa} 
+                        completed={tarefa.completed} 
+                        onComplete={()=> completarTarefa(index)} 
+                        onDelete={() => deletarTarefa(index)} 
+                        />
              })}
             </div>
             
