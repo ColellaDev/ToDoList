@@ -15,19 +15,17 @@ export function ListaTarefas({ tarefas, deletarTarefa, completarTarefa}) {
                 </div>
                 <div className={styles.tarefasConcluidas}>
                      <h3>Concluídas</h3>
-                     <span>0 de {tarefas.length}</span>
+                     <span>{tarefas.filter(tarefa => tarefa.completed).length} de {tarefas.length}</span>
                 </div>
             </div>
 
             <div className={styles.tarefas}>
                 
-                <Tarefa content="Tarefa completa" completed={true}/>
-                <Tarefa content="Tarefa incompleta" completed={false} />
 
                 {tarefas.map((tarefa, index) => {
                  return <Tarefa 
                         key={index} 
-                        content={tarefa} 
+                        content={tarefa.content} 
                         completed={tarefa.completed}
                         onComplete={()=> completarTarefa(index)} 
                         onDelete={() => deletarTarefa(index)} 

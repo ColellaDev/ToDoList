@@ -9,7 +9,11 @@ export function App() {
 
   const [tarefas, setTarefas] = useState([]);
   
-  function criarNovaTarefa(novaTarefa) {
+  function criarNovaTarefa(novaTarefaContent) {
+    const novaTarefa = {
+      content: novaTarefaContent,
+      completed: false
+  };
     setTarefas([...tarefas, novaTarefa]);
   }
 
@@ -22,11 +26,11 @@ export function App() {
   function completarTarefa(index) {
     const novasTarefas = tarefas.map((tarefa, i) => {
       if (i === index) {
-        return { ...tarefa, completed: !tarefa.completed };
+          return { ...tarefa, completed: !tarefa.completed };
       }
-      return { ...tarefa };
-    });
-    setTarefas(novasTarefas);
+      return tarefa;
+  });
+  setTarefas(novasTarefas);
   }
 
 
