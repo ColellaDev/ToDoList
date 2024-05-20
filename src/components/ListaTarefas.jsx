@@ -21,14 +21,14 @@ export function ListaTarefas({ tarefas, deletarTarefa, completarTarefa}) {
 
             <div className={styles.tarefas}>
                 
-                <Tarefa content="Tarefa completa" completed/>
-                <Tarefa content="Tarefa incompleta" />
+                <Tarefa content="Tarefa completa" completed={true}/>
+                <Tarefa content="Tarefa incompleta" completed={false} />
 
                 {tarefas.map((tarefa, index) => {
                  return <Tarefa 
                         key={index} 
                         content={tarefa} 
-                        completed={tarefa.completed} 
+                        completed={tarefa.completed}
                         onComplete={()=> completarTarefa(index)} 
                         onDelete={() => deletarTarefa(index)} 
                         />

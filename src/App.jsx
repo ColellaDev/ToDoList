@@ -19,9 +19,16 @@ export function App() {
   }
 
   
-
   function completarTarefa(index) {
+    const novasTarefas = tarefas.map((tarefa, i) => {
+      if (i === index) {
+        return { ...tarefa, completed: !tarefa.completed };
+      }
+      return { ...tarefa };
+    });
+    setTarefas(novasTarefas);
   }
+
 
   return (
     <>
